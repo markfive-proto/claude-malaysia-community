@@ -122,7 +122,7 @@ export default function Contributors({ items }: { items: Contributor[] }) {
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <span className="text-[0.85rem] font-semibold" style={{ color: "var(--text-heading)" }}>
+                    <span className="text-[0.92rem] font-bold" style={{ color: "var(--text-heading)" }}>
                       {c.name}
                     </span>
                     {c.handle && (
@@ -144,7 +144,7 @@ export default function Contributors({ items }: { items: Contributor[] }) {
                       {c.tag}
                     </span>
                   </div>
-                  <p className="text-[0.85rem] leading-[1.55]" style={{ color: "var(--text-secondary)" }}>
+                  <p className="text-[0.88rem] leading-[1.6]" style={{ color: "var(--text-body)" }}>
                     {c.tip}
                   </p>
                 </div>

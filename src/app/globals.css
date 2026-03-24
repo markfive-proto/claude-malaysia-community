@@ -36,7 +36,7 @@ body {
   background: var(--bg);
   color: var(--text-body);
   font-family: var(--font-jakarta), system-ui, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;

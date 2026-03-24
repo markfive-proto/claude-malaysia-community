@@ -88,7 +88,7 @@ export default function Resources({ items }: { items: Resource[] }) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[0.88rem] font-bold truncate" style={{ color: "var(--text-heading)" }}>
+                    <span className="text-[0.95rem] font-bold truncate" style={{ color: "var(--text-heading)" }}>
                       {r.title}
                     </span>
                     {r.stars && (
@@ -97,7 +97,7 @@ export default function Resources({ items }: { items: Resource[] }) {
                       </span>
                     )}
                   </div>
-                  <p className="text-[0.8rem] leading-[1.5] mb-2" style={{ color: "var(--text-secondary)" }}>
+                  <p className="text-[0.85rem] leading-[1.55] mb-2" style={{ color: "var(--text-secondary)" }}>
                     {r.desc}
                   </p>
                   <div className="flex items-center gap-2">

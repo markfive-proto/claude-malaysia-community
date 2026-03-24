@@ -53,8 +53,8 @@ export default function Home() {
             </em>
           </h1>
           <p
-            className="max-w-[560px] text-[0.95rem] leading-[1.7]"
-            style={{ color: "var(--text-secondary)" }}
+            className="max-w-[560px] text-[1rem] leading-[1.7]"
+            style={{ color: "var(--text-body)" }}
           >
             Feature releases, team announcements, and real community sentiment from Reddit,
             Twitter/X, and Hacker News — March 2026.

@@ -204,10 +204,10 @@ function TimelineItem({ item }: { item: TimelineEntry }) {
           </div>
 
           {/* Title */}
-          <h3 className="text-[1rem] font-bold mb-1 leading-[1.35]" style={{ color: "var(--text-heading)" }}>{item.title}</h3>
+          <h3 className="text-[1.15rem] font-bold mb-1.5 leading-[1.3]" style={{ color: "var(--text-heading)", fontFamily: "var(--font-newsreader), serif" }}>{item.title}</h3>
 
           {/* Description */}
-          <p className="text-[0.85rem] leading-[1.6] mb-2" style={{ color: "var(--text-secondary)" }}>{item.desc}</p>
+          <p className="text-[0.88rem] leading-[1.65] mb-2.5" style={{ color: "var(--text-secondary)" }}>{item.desc}</p>
 
           {/* Read more — compact pill buttons */}
           {hasSources && (
