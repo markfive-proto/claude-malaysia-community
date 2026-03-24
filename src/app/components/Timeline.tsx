@@ -233,25 +233,25 @@ function TimelineItem({ item }: { item: TimelineEntry }) {
 
           {/* Sentiment below buttons */}
           {item.sentiment && (
-            <div className="mt-2.5">
-              <div className="flex items-center gap-2 mb-1">
+            <div className="mt-3 rounded-lg p-3" style={{ background: "var(--surface)", border: "1px solid var(--border)" }}>
+              <div className="flex items-center gap-2.5 mb-2">
                 {item.sentiment.topReaction && (
-                  <span className="text-[9px] px-1.5 py-0.5 rounded" style={{ fontFamily: "var(--font-jetbrains), monospace", background: "var(--surface-alt)", color: "var(--text-secondary)", border: "1px solid var(--border)" }}>
+                  <span className="text-[11px] px-2 py-0.5 rounded-md font-medium" style={{ fontFamily: "var(--font-jetbrains), monospace", background: "var(--surface-alt)", color: "var(--text-heading)", border: "1px solid var(--border)" }}>
                     {item.sentiment.topReaction}
                   </span>
                 )}
-                <div className="h-[5px] w-[100px] rounded-full overflow-hidden flex gap-[1px]">
+                <div className="h-[6px] flex-1 max-w-[140px] rounded-full overflow-hidden flex gap-[1px]">
                   <div className="rounded-l-full" style={{ width: `${item.sentiment.positive}%`, background: "var(--positive)" }} />
                   <div style={{ width: `${item.sentiment.neutral}%`, background: "var(--neutral)" }} />
                   <div className="rounded-r-full" style={{ width: `${item.sentiment.negative}%`, background: "var(--negative)" }} />
                 </div>
-                <div className="flex gap-2" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "9px" }}>
+                <div className="flex gap-2.5" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "11px" }}>
                   <span style={{ color: "var(--positive)" }}>{item.sentiment.positive}%</span>
                   <span style={{ color: "var(--neutral)" }}>{item.sentiment.neutral}%</span>
                   <span style={{ color: "var(--negative)" }}>{item.sentiment.negative}%</span>
                 </div>
               </div>
-              <p className="text-[0.78rem] leading-[1.45]" style={{ color: "var(--text-ghost)" }}>
+              <p className="text-[0.84rem] leading-[1.55]" style={{ color: "var(--text-secondary)" }}>
                 {item.sentiment.summary}
               </p>
             </div>
