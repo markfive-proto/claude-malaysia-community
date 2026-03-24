@@ -15,7 +15,7 @@ export default function Home() {
         <PromoBanner />
       </div>
 
-      <div className="max-w-[860px] mx-auto px-6">
+      <main className="max-w-[860px] mx-auto px-6">
         {/* Header */}
         <header className="pt-12 pb-8" style={{ borderBottom: "1px solid var(--border)" }}>
           <div
@@ -154,7 +154,7 @@ export default function Home() {
             Claude Malaysia Community
           </div>
         </footer>
-      </div>
+      </main>
     </>
   );
 }

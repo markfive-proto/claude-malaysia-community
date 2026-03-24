@@ -186,7 +186,7 @@ function TimelineItem({ item }: { item: TimelineEntry }) {
   ) : null;
 
   return (
-    <div className="relative pb-8 last:pb-0">
+    <article className="relative pb-8 last:pb-0">
       <div className="absolute -left-9 top-[6px] w-[15px] h-[15px] rounded-full z-[2]" style={{ background: categoryColors[item.category]?.dot || "var(--text-ghost)", boxShadow: categoryColors[item.category]?.shadow || "none" }} />
 
       <div className={tweetPanel ? "flex flex-col md:flex-row gap-4 items-start" : ""}>
@@ -259,7 +259,7 @@ function TimelineItem({ item }: { item: TimelineEntry }) {
         </div>
 
       </div>
-    </div>
+    </article>
   );
 }
 
