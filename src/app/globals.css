@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #faf9f7;
+  --surface: #ffffff;
+  --surface-alt: #f0ede7;
+  --border: #e5e0d8;
+  --border-strong: #d1c9bc;
+  --clay: #c25a2e;
+  --clay-light: rgba(194, 90, 46, 0.08);
+  --clay-mid: rgba(194, 90, 46, 0.15);
+  --ochre: #b88520;
+  --sage: #2d8a4e;
+  --teal: #1a7a6d;
+  --violet: #6b5ce7;
+  --violet-light: rgba(107, 92, 231, 0.08);
+  --text-heading: #1a1612;
+  --text-body: #3d3528;
+  --text-secondary: #6b6050;
+  --text-dim: #9a8e7c;
+  --text-ghost: #c4b9a8;
+  --positive: #16a34a;
+  --negative: #dc2626;
+  --neutral: #d97706;
+  --twitter: #1d9bf0;
+  --reddit: #ff4500;
+  --hn: #ff6600;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-body);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.82em;
+  color: var(--clay);
+  background: rgba(194, 90, 46, 0.08);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid rgba(194, 90, 46, 0.15);
+}
+
+/* Hide scrollbar on tweet embeds */
+.tweet-embed-wrap iframe {
+  overflow: hidden !important;
+}
+.tweet-embed-wrap {
+  overflow: hidden;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.35); }
+  50% { box-shadow: 0 0 0 5px rgba(22, 163, 74, 0); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.3); }
+  50% { box-shadow: 0 0 0 5px rgba(220, 38, 38, 0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(45, 138, 78, 0.3); }
+  50% { opacity: 0.5; box-shadow: 0 0 0 5px rgba(45, 138, 78, 0); }
+}
