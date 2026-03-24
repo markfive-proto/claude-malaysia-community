@@ -1,10 +1,10 @@
 import PromoBanner from "./components/PromoBanner";
 import StickyNav from "./components/StickyNav";
 import Timeline from "./components/Timeline";
-import Sentiment from "./components/Sentiment";
 import Contributors from "./components/Contributors";
+import Resources from "./components/Resources";
 import PageTabs from "./components/PageTabs";
-import { timeline, platformUpdates, quotes, contributors, sources } from "./data";
+import { timeline, platformUpdates, contributors, resources, sources } from "./data";
 
 export default function Home() {
   return (
@@ -106,10 +106,10 @@ export default function Home() {
             </>
           }
           community={
-            <>
-              <Sentiment quotes={quotes} />
-              <Contributors items={contributors} />
-            </>
+            <Contributors items={contributors} />
+          }
+          resources={
+            <Resources items={resources} />
           }
         />
 

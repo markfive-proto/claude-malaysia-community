@@ -605,3 +605,129 @@ export const sources = [
   { label: "TechCrunch", url: "https://techcrunch.com/2026/03/03/claude-code-rolls-out-a-voice-mode-capability/" },
   { label: "VentureBeat", url: "https://venturebeat.com/orchestration/anthropic-just-shipped-an-openclaw-killer-called-claude-code-channels" },
 ];
+
+export type Resource = {
+  title: string;
+  desc: string;
+  url: string;
+  category: "official" | "skills" | "marketing" | "community" | "learning";
+  stars?: string;
+  author?: string;
+};
+
+export const resources: Resource[] = [
+  // Official
+  {
+    title: "Everything Claude Code",
+    desc: "The comprehensive guide to Claude Code — setup, tips, workflows, CLAUDE.md examples, and advanced usage patterns.",
+    url: "https://github.com/affaan-m/everything-claude-code",
+    category: "official",
+    author: "affaan-m",
+  },
+  {
+    title: "Anthropic Skills (Official)",
+    desc: "Official public repository of Agent Skills by Anthropic. The reference implementation for building and sharing skills.",
+    url: "https://github.com/anthropics/skills",
+    category: "official",
+    author: "Anthropic",
+  },
+  {
+    title: "Claude Code (Official)",
+    desc: "Official Claude Code repository — changelog, releases, issue tracker, and CLAUDE.md reference.",
+    url: "https://github.com/anthropics/claude-code",
+    category: "official",
+    author: "Anthropic",
+  },
+  {
+    title: "Claude Code Docs",
+    desc: "Official documentation for Claude Code — hooks, skills, channels, MCP, plugins, and configuration.",
+    url: "https://code.claude.com/docs/en",
+    category: "official",
+    author: "Anthropic",
+  },
+
+  // Skills
+  {
+    title: "Awesome Claude Code",
+    desc: "Curated list of skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code.",
+    url: "https://github.com/hesreallyhim/awesome-claude-code",
+    category: "skills",
+    stars: "2.5k+",
+    author: "hesreallyhim",
+  },
+  {
+    title: "Awesome Claude Skills",
+    desc: "Covers skills officially announced and available across Claude.ai, Code, and API. Community contributions welcome.",
+    url: "https://github.com/travisvn/awesome-claude-skills",
+    category: "skills",
+    stars: "1.8k+",
+    author: "travisvn",
+  },
+  {
+    title: "192+ Claude Skills Collection",
+    desc: "Engineering, DevOps, marketing, product, compliance, and C-level advisory skills. Works with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+    url: "https://github.com/alirezarezvani/claude-skills",
+    category: "skills",
+    stars: "800+",
+    author: "alirezarezvani",
+  },
+  {
+    title: "Claude Skills Collection",
+    desc: "Official and community-built skills — productivity, creativity, coding, and more. Modular and easy to install.",
+    url: "https://github.com/abubakarsiddik31/claude-skills-collection",
+    category: "skills",
+    author: "abubakarsiddik31",
+  },
+
+  // Marketing
+  {
+    title: "Marketing Skills for Claude Code",
+    desc: "CRO, copywriting, SEO, analytics, and growth engineering skills for technical marketers and founders.",
+    url: "https://github.com/coreyhaines31/marketingskills",
+    category: "marketing",
+    author: "coreyhaines31",
+  },
+  {
+    title: "AI Marketing Suite",
+    desc: "15 marketing skills with parallel subagents — website audits, copy generation, email sequences, ad campaigns, content calendars, and client-ready PDF reports.",
+    url: "https://github.com/zubair-trabzada/ai-marketing-claude",
+    category: "marketing",
+    author: "zubair-trabzada",
+  },
+
+  // Community
+  {
+    title: "Awesome Claude (Directory)",
+    desc: "Claude AI resources directory — tools, integrations, tutorials, and community projects. Searchable and categorized.",
+    url: "https://awesomeclaude.ai",
+    category: "community",
+  },
+  {
+    title: "ClaudeLog",
+    desc: "Claude Code docs, guides, tutorials, best practices, and a detailed changelog tracker.",
+    url: "https://claudelog.com",
+    category: "community",
+  },
+  {
+    title: "How Boris Uses Claude Code",
+    desc: "The creator of Claude Code's personal workflow — 5 parallel sessions, CLAUDE.md discipline, and system notifications.",
+    url: "https://howborisusesclaudecode.com",
+    category: "learning",
+    author: "Boris Cherny",
+  },
+
+  // Learning
+  {
+    title: "Building Claude Code — Pragmatic Engineer",
+    desc: "Deep dive interview with Boris Cherny on building Claude Code. Architecture decisions, team workflows, and lessons learned.",
+    url: "https://newsletter.pragmaticengineer.com/p/building-claude-code-with-boris-cherny",
+    category: "learning",
+    author: "Gergely Orosz",
+  },
+  {
+    title: "Claude Code 2025 Summary",
+    desc: "From launch to beast — full timeline of features, milestones, and the evolution of Claude Code throughout 2025.",
+    url: "https://claudefa.st/blog/guide/changelog",
+    category: "learning",
+  },
+];

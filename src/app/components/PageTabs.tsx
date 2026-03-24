@@ -2,50 +2,53 @@
 
 import { useState } from "react";
 
+type TabKey = "announcements" | "community" | "resources";
+
+const tabs: { key: TabKey; label: string }[] = [
+  { key: "announcements", label: "Announcements" },
+  { key: "community", label: "Community" },
+  { key: "resources", label: "Resources" },
+];
+
 export default function PageTabs({
   announcements,
   community,
+  resources,
 }: {
   announcements: React.ReactNode;
   community: React.ReactNode;
+  resources: React.ReactNode;
 }) {
-  const [tab, setTab] = useState<"announcements" | "community">("announcements");
+  const [tab, setTab] = useState<TabKey>("announcements");
 
   return (
     <>
-      {/* Tab bar */}
       <div
-        className="flex gap-1 mt-10 mb-2 p-1 rounded-xl w-fit"
+        className="flex gap-1 mt-8 mb-2 p-1 rounded-xl w-fit"
         style={{ background: "var(--surface-alt)", border: "1px solid var(--border)" }}
       >
-        <button
-          onClick={() => setTab("announcements")}
-          className="cursor-pointer rounded-lg px-5 py-2.5 text-[0.88rem] font-semibold transition-all duration-150"
-          style={{
-            background: tab === "announcements" ? "var(--surface)" : "transparent",
-            color: tab === "announcements" ? "var(--text-heading)" : "var(--text-dim)",
-            boxShadow: tab === "announcements" ? "0 1px 3px rgba(0,0,0,0.06)" : "none",
-            border: tab === "announcements" ? "1px solid var(--border)" : "1px solid transparent",
-          }}
-        >
-          Announcements & Features
-        </button>
-        <button
-          onClick={() => setTab("community")}
-          className="cursor-pointer rounded-lg px-5 py-2.5 text-[0.88rem] font-semibold transition-all duration-150"
-          style={{
-            background: tab === "community" ? "var(--surface)" : "transparent",
-            color: tab === "community" ? "var(--text-heading)" : "var(--text-dim)",
-            boxShadow: tab === "community" ? "0 1px 3px rgba(0,0,0,0.06)" : "none",
-            border: tab === "community" ? "1px solid var(--border)" : "1px solid transparent",
-          }}
-        >
-          Community
-        </button>
+        {tabs.map((t) => (
+          <button
+            key={t.key}
+            onClick={() => setTab(t.key)}
+            className="cursor-pointer rounded-lg px-4 py-2 text-[0.85rem] font-semibold transition-all duration-150"
+            style={{
+              background: tab === t.key ? "var(--surface)" : "transparent",
+              color: tab === t.key ? "var(--text-heading)" : "var(--text-dim)",
+              boxShadow: tab === t.key ? "0 1px 3px rgba(0,0,0,0.06)" : "none",
+              border: tab === t.key ? "1px solid var(--border)" : "1px solid transparent",
+            }}
+          >
+            {t.label}
+          </button>
+        ))}
       </div>
 
-      {/* Tab content */}
-      <div>{tab === "announcements" ? announcements : community}</div>
+      <div>
+        {tab === "announcements" && announcements}
+        {tab === "community" && community}
+        {tab === "resources" && resources}
+      </div>
     </>
   );
 }

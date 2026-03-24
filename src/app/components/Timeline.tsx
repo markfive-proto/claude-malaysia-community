@@ -170,7 +170,7 @@ function TimelineItem({ item }: { item: TimelineEntry }) {
 
   /* ── Left column: tweet embed only ── */
   const tweetPanel = tweetId ? (
-    <div className="shrink-0 w-[300px] hidden md:block">
+    <div className="shrink-0 w-full md:w-[300px]">
       <div className="tweet-embed-wrap rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
         <iframe
           src={`https://platform.twitter.com/embed/Tweet.html?id=${tweetId}&theme=light`}
@@ -189,7 +189,7 @@ function TimelineItem({ item }: { item: TimelineEntry }) {
     <div className="relative pb-8 last:pb-0">
       <div className="absolute -left-9 top-[6px] w-[15px] h-[15px] rounded-full z-[2]" style={{ background: categoryColors[item.category]?.dot || "var(--text-ghost)", boxShadow: categoryColors[item.category]?.shadow || "none" }} />
 
-      <div className={tweetPanel ? "flex gap-4 items-start" : ""}>
+      <div className={tweetPanel ? "flex flex-col md:flex-row gap-4 items-start" : ""}>
         {/* Tweet on the left */}
         {tweetPanel}
         <div className="flex-1 min-w-0">

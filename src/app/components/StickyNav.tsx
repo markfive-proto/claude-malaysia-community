@@ -6,8 +6,8 @@ const sections = [
   { id: "timeline", label: "Timeline" },
   { id: "platform", label: "Platform" },
   { id: "sources", label: "Sources" },
-  { id: "sentiment", label: "Sentiment" },
-  { id: "contributors", label: "Tips" },
+  { id: "contributors", label: "Community" },
+  { id: "resources", label: "Resources" },
 ];
 
 export default function StickyNav() {
