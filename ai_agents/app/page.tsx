@@ -1,7 +1,7 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { DefaultChatTransport } from "ai";
+import { DefaultChatTransport, type UIMessage } from "ai";
 import { useState, useEffect, useRef } from "react";
 import { Chat } from "@/components/chat";
 import { ChatInput } from "@/components/chat-input";
@@ -18,10 +18,10 @@ export default function Page() {
   const [model, setModel] = useState("anthropic/claude-sonnet-4-5");
   const [activeSkills, setActiveSkills] = useState<string[]>([]);
   const [skills, setSkills] = useState<SkillInfo[]>([]);
-  const transportRef = useRef<DefaultChatTransport | null>(null);
+  const transportRef = useRef<DefaultChatTransport<UIMessage> | null>(null);
 
   if (!transportRef.current) {
-    transportRef.current = new DefaultChatTransport({
+    transportRef.current = new DefaultChatTransport<UIMessage>({
       api: "/api/chat",
       body: () => ({ model, activeSkills }),
     });
