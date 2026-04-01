@@ -7,6 +7,14 @@ import type { ParsedSkill, SkillFrontmatter, LoadedSkill } from "./types";
 
 const SKILLS_DIR = path.join(process.cwd(), "skills");
 
+// Register custom tool handlers here. Key = skill name, value = execute function.
+// This avoids dynamic imports which Turbopack cannot resolve at build time.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const handlerRegistry: Record<string, (args: any) => Promise<unknown>> = {
+  // Example:
+  // "web-search": async (args) => { ... },
+};
+
 function parseSkillFile(filePath: string): ParsedSkill {
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
@@ -66,10 +74,8 @@ export function loadSkills(skillNames?: string[]): LoadedSkill[] {
           description: frontmatter.description,
           inputSchema: buildZodSchema(frontmatter.parameters),
           execute: async (args) => {
-            if (frontmatter.handler) {
-              const handlerPath = path.join(SKILLS_DIR, frontmatter.handler);
-              const handlerModule = await import(handlerPath);
-              return handlerModule.default(args);
+            if (frontmatter.handler && handlerRegistry[frontmatter.name]) {
+              return handlerRegistry[frontmatter.name](args);
             }
             return {
               result: `Tool "${frontmatter.name}" executed with args: ${JSON.stringify(args)}`,
