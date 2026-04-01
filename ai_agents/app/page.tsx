@@ -2,7 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { Chat } from "@/components/chat";
 import { ChatInput } from "@/components/chat-input";
 import { ModelSelector } from "@/components/model-selector";
@@ -15,21 +15,29 @@ interface SkillInfo {
 }
 
 export default function Page() {
-  const [model, setModel] = useState("anthropic/claude-sonnet-4-5");
+  const [model, setModel] = useState("google/gemini-2.5-flash");
   const [activeSkills, setActiveSkills] = useState<string[]>([]);
   const [skills, setSkills] = useState<SkillInfo[]>([]);
-  const transportRef = useRef<DefaultChatTransport<UIMessage> | null>(null);
 
-  if (!transportRef.current) {
-    transportRef.current = new DefaultChatTransport<UIMessage>({
-      api: "/api/chat",
-      body: () => ({ model, activeSkills }),
-    });
-  }
+  // Use refs so the transport body closure always reads latest values
+  const modelRef = useRef(model);
+  const activeSkillsRef = useRef(activeSkills);
+  modelRef.current = model;
+  activeSkillsRef.current = activeSkills;
 
-  const { messages, sendMessage, status } = useChat({
-    transport: transportRef.current,
-  });
+  const transport = useMemo(
+    () =>
+      new DefaultChatTransport<UIMessage>({
+        api: "/api/chat",
+        body: () => ({
+          model: modelRef.current,
+          activeSkills: activeSkillsRef.current,
+        }),
+      }),
+    []
+  );
+
+  const { messages, sendMessage, status } = useChat({ transport });
 
   useEffect(() => {
     fetch("/api/skills")
