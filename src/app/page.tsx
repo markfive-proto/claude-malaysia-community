@@ -1,4 +1,3 @@
-import PromoBanner from "./components/PromoBanner";
 import StickyNav from "./components/StickyNav";
 import Timeline from "./components/Timeline";
 import Contributors from "./components/Contributors";
@@ -10,11 +9,6 @@ export default function Home() {
   return (
     <>
       <StickyNav />
-      {/* Promo Banner — full width */}
-      <div className="pt-[56px]">
-        <PromoBanner />
-      </div>
-
       <main className="max-w-[860px] mx-auto px-6">
         {/* Header */}
         <header className="pt-12 pb-8" style={{ borderBottom: "1px solid var(--border)" }}>
