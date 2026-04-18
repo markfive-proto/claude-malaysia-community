@@ -3,7 +3,7 @@ import Timeline from "./components/Timeline";
 import Contributors from "./components/Contributors";
 import Resources from "./components/Resources";
 import PageTabs from "./components/PageTabs";
-import { timeline, platformUpdates, contributors, resources, sources } from "./data";
+import { timeline, platformUpdates, contributors, communityPosts, resources, sources } from "./data";
 
 export default function Home() {
   return (
@@ -100,7 +100,7 @@ export default function Home() {
             </>
           }
           community={
-            <Contributors items={contributors} />
+            <Contributors items={contributors} posts={communityPosts} />
           }
           resources={
             <Resources items={resources} />

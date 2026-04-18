@@ -22,9 +22,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 const siteUrl = "https://claude-malaysia-community.vercel.app";
-const title = "Claude Malaysia Community — Pulse Check";
+const title = "Claude Malaysia Community — AI Developer Pulse Check";
 const description =
-  "Latest Claude & Claude Code announcements, feature releases, community tips, and real developer sentiment from Twitter/X, Reddit & Hacker News. Founded by Marcus Chia.";
+  "Malaysia's Claude & Claude Code community hub — live announcements, Opus 4.7 updates, community tips, developer sentiment from Twitter/X, Reddit & Hacker News, and curated resources. 579 members. Founded by Marcus Chia.";
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     "Claude",
     "Claude Code",
     "Claude Cowork",
+    "Claude Design",
     "Anthropic",
     "Claude Malaysia",
     "AI coding",
@@ -46,12 +47,18 @@ export const metadata: Metadata = {
     "Claude Code channels",
     "Claude Code voice mode",
     "Claude Code dispatch",
+    "Claude Opus 4.7",
     "Claude Opus 4.6",
     "Claude Sonnet 4.6",
     "MCP",
     "Model Context Protocol",
     "AI developer tools",
     "Claude community Malaysia",
+    "Claude Managed Agents",
+    "Claude Computer Use",
+    "vibe coding",
+    "AI agent",
+    "Malaysian AI community",
   ],
   authors: [{ name: "Marcus Chia", url: "https://www.linkedin.com/in/marcusmark5/" }],
   creator: "Marcus Chia",
@@ -93,38 +100,77 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  other: {
+    "fb:app_id": "",
+    "article:section": "Technology",
+  },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Claude Malaysia Community",
-  alternateName: "Claude MY Pulse Check",
-  url: siteUrl,
-  description,
-  author: {
-    "@type": "Person",
-    name: "Marcus Chia",
-    url: "https://www.linkedin.com/in/marcusmark5/",
-  },
-  publisher: {
-    "@type": "Organization",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
     name: "Claude Malaysia Community",
-    url: "https://www.facebook.com/groups/836579066085697",
-  },
-  inLanguage: "en",
-  about: {
-    "@type": "SoftwareApplication",
-    name: "Claude Code",
-    applicationCategory: "DeveloperApplication",
-    operatingSystem: "macOS, Linux, Windows",
-    creator: {
+    alternateName: "Claude MY Pulse Check",
+    url: siteUrl,
+    description,
+    author: {
+      "@type": "Person",
+      name: "Marcus Chia",
+      url: "https://www.linkedin.com/in/marcusmark5/",
+    },
+    publisher: {
       "@type": "Organization",
-      name: "Anthropic",
-      url: "https://anthropic.com",
+      name: "Claude Malaysia Community",
+      url: "https://www.facebook.com/groups/836579066085697",
+    },
+    inLanguage: "en",
+    about: {
+      "@type": "SoftwareApplication",
+      name: "Claude Code",
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "macOS, Linux, Windows",
+      creator: {
+        "@type": "Organization",
+        name: "Anthropic",
+        url: "https://anthropic.com",
+      },
     },
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Claude Malaysia Community",
+    url: siteUrl,
+    sameAs: [
+      "https://www.facebook.com/groups/836579066085697",
+    ],
+    foundingDate: "2026-02-06",
+    founder: {
+      "@type": "Person",
+      name: "Marcus Chia",
+    },
+    memberOf: {
+      "@type": "ProgramMembership",
+      programName: "Claude AI Community",
+    },
+    description: "Malaysia's largest Claude AI community — 579 members sharing tips, workflows, and news about Claude Code, Anthropic, and AI development.",
+    areaServed: {
+      "@type": "Country",
+      name: "Malaysia",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Announcements", item: `${siteUrl}/#announcements` },
+      { "@type": "ListItem", position: 3, name: "Community", item: `${siteUrl}/#community` },
+      { "@type": "ListItem", position: 4, name: "Resources", item: `${siteUrl}/#resources` },
+    ],
+  },
+];
 
 export default function RootLayout({
   children,

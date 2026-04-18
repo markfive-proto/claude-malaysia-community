@@ -648,7 +648,110 @@ export const quotes: Quote[] = [
   },
 ];
 
+export type CommunityPost = {
+  id: string;
+  author: string;
+  avatar: string;
+  date: string;
+  summary: string;
+  tags: string[];
+  fbUrl: string;
+  engagement?: { likes: number; comments: number };
+};
+
+export const communityPosts: CommunityPost[] = [
+  {
+    id: "claude-design-preview",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 18, 2026",
+    summary:
+      "Claude Design is out now! AI design/prototyping tool with Opus 4.7 — prototype mode, slide/presentation mode, design system generation from GitHub repos, team collaboration, import/export (fig, PDF, PPTX, HTML, Canva, Claude Code handoff). Separate weekly limits from regular sessions.",
+    tags: ["Claude Design", "Opus 4.7"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 2, comments: 0 },
+  },
+  {
+    id: "opus-47-token-test",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 17, 2026",
+    summary:
+      "Tested Opus 4.7 with max effort — 70% usage on 5x plan after one hour of autonomous work. Built 3D mockups, logo customizer, simple checkout. Compared to Gemini 3.1 Pro which failed the same prompt. \"More autonomous. More self-correcting. More relentless.\"",
+    tags: ["Opus 4.7", "Benchmark"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 0, comments: 0 },
+  },
+  {
+    id: "opus-47-release",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 16, 2026",
+    summary:
+      "Opus 4.7 release breakdown: 13-14% coding benchmark jump, better vision for technical diagrams, cyber safeguards with differential capability reduction, same pricing ($5/M input, $25/M output). Available on API, Bedrock, Vertex AI, and Microsoft Foundry.",
+    tags: ["Opus 4.7", "Release"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 0, comments: 0 },
+  },
+  {
+    id: "opus-advisor-pattern",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 14, 2026",
+    summary:
+      "Pair Opus as advisor with Sonnet/Haiku as executor. Executor runs tasks and tool-calls Opus only when stuck — like asking a senior. Keeps costs down while preserving frontier reasoning where it matters. Beta on Claude platform developer API.",
+    tags: ["Workflow", "Cost Optimization"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 0, comments: 0 },
+  },
+  {
+    id: "managed-agents",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 12, 2026",
+    summary:
+      "Claude Managed Agents — production infrastructure for AI agents at scale. Early customers: Notion (parallel workspace tasks), Asana (AI teammates), Rakuten (specialist agents in under a week), Sentry (auto-fix PRs), Vibecode (10x faster agent setup).",
+    tags: ["Managed Agents", "Platform"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 0, comments: 0 },
+  },
+  {
+    id: "daily-workflow",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 10, 2026",
+    summary:
+      "Daily workflow: 2-4 parallel projects, 3-8 PRs daily, 3-6 dispatched AI agents for research. AI flags PR issues, resolves conflicts. Team culture: discuss feature → AI scaffold → immediately tinker. Avoid starting in Figma — explore with AI first, then refine.",
+    tags: ["Workflow", "Team Culture"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 0, comments: 0 },
+  },
+  {
+    id: "computer-use",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 6, 2026",
+    summary:
+      "Claude Computer Use announced — assign tasks from your phone, come back to finished work. Uses connected apps first (Slack, Calendar), requests app access when no connector exists. Permissions: screenshots, mouse/keyboard, full app access. Available on Pro and Max plans.",
+    tags: ["Computer Use", "New Feature"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 0, comments: 0 },
+  },
+  {
+    id: "max-plan-usage",
+    author: "Marcus Chia",
+    avatar: "MC",
+    date: "April 4, 2026",
+    summary:
+      "On the Max 5X plan — burned through entire usage quota in 3 hours on Default setting. Switched to Opus Plan Mode. Now with Opus 4.6 and 1M context window, testing how fast usage gets consumed within the 5-hour reset interval.",
+    tags: ["Usage", "Max Plan"],
+    fbUrl: "https://www.facebook.com/groups/836579066085697/",
+    engagement: { likes: 0, comments: 0 },
+  },
+];
+
 export type Contributor = {
+  id: string;
   name: string;
   handle?: string;
   avatar: string;
@@ -658,6 +761,7 @@ export type Contributor = {
 
 export const contributors: Contributor[] = [
   {
+    id: "marcus-chia",
     name: "Marcus Chia",
     handle: "@marcuschia",
     avatar: "MC",
@@ -665,6 +769,7 @@ export const contributors: Contributor[] = [
     tag: "Workflow",
   },
   {
+    id: "izzat-zainol",
     name: "Izzat Zainol",
     handle: "@izzatzainol",
     avatar: "IZ",
@@ -672,6 +777,7 @@ export const contributors: Contributor[] = [
     tag: "Automation",
   },
   {
+    id: "wei-liang",
     name: "Wei Liang",
     handle: "@weiliang",
     avatar: "WL",
@@ -679,6 +785,7 @@ export const contributors: Contributor[] = [
     tag: "Refactoring",
   },
   {
+    id: "sarah-tan",
     name: "Sarah Tan",
     handle: "@sarahtan_dev",
     avatar: "ST",
@@ -686,6 +793,7 @@ export const contributors: Contributor[] = [
     tag: "Testing",
   },
   {
+    id: "ahmad-razif",
     name: "Ahmad Razif",
     handle: "@ahmadrazif",
     avatar: "AR",
@@ -693,6 +801,7 @@ export const contributors: Contributor[] = [
     tag: "Git",
   },
   {
+    id: "priya-nair",
     name: "Priya Nair",
     handle: "@priyanair",
     avatar: "PN",
@@ -700,6 +809,7 @@ export const contributors: Contributor[] = [
     tag: "Quality",
   },
   {
+    id: "daniel-lim",
     name: "Daniel Lim",
     handle: "@daniellim_my",
     avatar: "DL",
@@ -707,6 +817,7 @@ export const contributors: Contributor[] = [
     tag: "DevOps",
   },
   {
+    id: "farah-hassan",
     name: "Farah Hassan",
     handle: "@farahhassan",
     avatar: "FH",
