@@ -31,7 +31,15 @@ export default function StickyNav() {
       }}
       aria-label="Main navigation"
     >
-      <div className="max-w-[860px] mx-auto px-6 flex items-center gap-2 h-[56px] overflow-x-auto">
+      <div
+        className="max-w-[860px] mx-auto px-6 flex items-center gap-2"
+        style={{
+          height: "56px",
+          paddingTop: "env(safe-area-inset-top, 0px)",
+          paddingLeft: "max(24px, env(safe-area-inset-left))",
+          paddingRight: "max(24px, env(safe-area-inset-right))",
+        }}
+      >
         <a
           href="#"
           className="shrink-0 mr-2 text-[16px] font-semibold no-underline"
