@@ -47,7 +47,7 @@ config = {
   "agents": {
     "defaults": {
       "workspace": "/data/workspace",
-      "model": "openai/MiniMax-M2.7",
+      "model": "MiniMax-M2.5",
       "max_tokens": 8192,
       "temperature": 0.7,
       "max_tool_iterations": 20
