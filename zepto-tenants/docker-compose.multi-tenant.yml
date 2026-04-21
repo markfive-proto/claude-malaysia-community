@@ -30,7 +30,7 @@ services:
     container_name: zc-zepto-zap
     volumes:
       - zepto-zap-data:/data
-      - ./tenants/zepto-zap/config.json:/data/config.json:ro
+      - ./tenants/zepto-zap/config.json:/data/.zeptoclaw/config.json
     environment:
       - RUST_LOG=zeptoclaw=info
       - RUST_LOG_FORMAT=json

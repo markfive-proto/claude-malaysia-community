@@ -70,7 +70,7 @@ for TENANT in "${TENANTS[@]}"; do
     container_name: zc-$TENANT
     volumes:
       - $TENANT-data:/data
-      - ./tenants/$TENANT/config.json:/data/config.json:ro
+      - ./tenants/$TENANT/config.json:/data/.zeptoclaw/config.json
     environment:
       - RUST_LOG=zeptoclaw=info
       - RUST_LOG_FORMAT=json
