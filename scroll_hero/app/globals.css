@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #EDE8DF;
+  --gold: #C4A35A;
+  --gold-light: #D4B96E;
+  --gold-dim: rgba(196, 163, 90, 0.4);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-cormorant: var(--font-cormorant);
+  --font-tenor: var(--font-tenor);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Custom cursor */
+* {
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(196, 163, 90, 0.5);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-tenor {
+  font-family: var(--font-tenor);
+}
+
+@keyframes grain {
+  0%   { transform: translate(0, 0) }
+  10%  { transform: translate(-5%, -10%) }
+  20%  { transform: translate(-15%, 5%) }
+  30%  { transform: translate(7%, -25%) }
+  40%  { transform: translate(-5%, 25%) }
+  50%  { transform: translate(-15%, 10%) }
+  60%  { transform: translate(15%, 0%) }
+  70%  { transform: translate(0%, 15%) }
+  80%  { transform: translate(3%, 35%) }
+  90%  { transform: translate(-10%, 10%) }
+}
+
+.film-grain {
+  filter: url(#film-grain);
+  opacity: 0.045;
+  animation: grain 0.3s steps(1) infinite;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px #050505 inset;
+  -webkit-text-fill-color: #EDE8DF;
+}
