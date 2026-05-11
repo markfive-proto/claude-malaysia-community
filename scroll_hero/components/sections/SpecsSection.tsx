@@ -45,10 +45,10 @@ export function SpecsSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#C4A35A]/8 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#C4A35A]/15 mb-24">
           {SPECS.map(({ label, display }, i) => (
             <ScrollReveal key={label} delay={i * 0.05}>
-              <div className="bg-[#050505] p-10 hover:bg-[#0d0c0a] transition-colors duration-500">
+              <div className="bg-[#0a0908] p-10 hover:bg-[#111009] transition-colors duration-500">
                 <div
                   className="font-cormorant text-[#C4A35A] mb-3 leading-none"
                   style={{ fontSize: "clamp(36px,4vw,60px)" }}

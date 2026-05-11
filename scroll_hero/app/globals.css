@@ -90,3 +90,13 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 100px #050505 inset;
   -webkit-text-fill-color: #EDE8DF;
 }
+
+/* Hide Next.js dev overlay and badge */
+[data-nextjs-dev-tools-button],
+nextjs-portal,
+#nextjs__DEVELOPMENT_SERVER__overlay,
+#__next-build-watcher,
+[data-nextjs-dialog-overlay],
+[data-nextjs-toast] {
+  display: none !important;
+}

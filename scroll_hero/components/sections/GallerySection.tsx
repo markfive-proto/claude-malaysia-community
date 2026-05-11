@@ -8,41 +8,31 @@ const GALLERY = [
     label: "THE LIVING",
     sublabel: "01 — Floor to ceiling glass",
     detail: "A horizon at your feet",
-    bg: "linear-gradient(135deg, #1a1208 0%, #0d0c08 40%, #050505 100%)",
-    accent:
-      "linear-gradient(90deg, transparent 0%, rgba(196,163,90,0.06) 50%, transparent 100%)",
+    frame: "/frames/frame_008.png",
   },
   {
     label: "THE MASTER",
     sublabel: "02 — KLCC facing",
     detail: "City lights as a night light",
-    bg: "linear-gradient(160deg, #080d14 0%, #050a10 50%, #050505 100%)",
-    accent:
-      "radial-gradient(ellipse at 30% 60%, rgba(100,150,220,0.08) 0%, transparent 60%)",
+    frame: "/frames/frame_018.png",
   },
   {
     label: "THE KITCHEN",
     sublabel: "03 — Bulthaup integration",
     detail: "Precision crafted",
-    bg: "linear-gradient(120deg, #140f08 0%, #0a0806 50%, #050505 100%)",
-    accent:
-      "linear-gradient(180deg, transparent 0%, rgba(196,163,90,0.04) 100%)",
+    frame: "/frames/frame_030.png",
   },
   {
     label: "THE TERRACE",
     sublabel: "04 — 580M elevation",
     detail: "Above the clouds",
-    bg: "linear-gradient(180deg, #020508 0%, #050810 60%, #050505 100%)",
-    accent:
-      "radial-gradient(ellipse at 50% 80%, rgba(80,120,200,0.1) 0%, transparent 60%)",
+    frame: "/frames/frame_045.png",
   },
   {
     label: "THE BATH",
     sublabel: "05 — Thassos marble",
     detail: "Stone and silence",
-    bg: "linear-gradient(160deg, #0f0f0e 0%, #0a0a09 50%, #050505 100%)",
-    accent:
-      "radial-gradient(ellipse at 70% 30%, rgba(220,210,190,0.05) 0%, transparent 50%)",
+    frame: "/frames/frame_058.png",
   },
 ];
 
@@ -130,19 +120,22 @@ export function GallerySection() {
           className="absolute top-0 left-0 flex h-full"
           style={{ x, width: `${GALLERY.length * 100}vw` }}
         >
-          {GALLERY.map(({ label, sublabel, detail, bg, accent }) => (
+          {GALLERY.map(({ label, sublabel, detail, frame }) => (
             <div
               key={label}
               className="relative flex-shrink-0 h-full w-screen flex items-end pb-24 px-16"
             >
-              <div className="absolute inset-0" style={{ background: bg }} />
-              <div className="absolute inset-0" style={{ background: accent }} />
+              {/* Frame photo background */}
               <div
-                className="absolute inset-0 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${frame})` }}
+              />
+              {/* Gradient overlay for text legibility */}
+              <div
+                className="absolute inset-0"
                 style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(196,163,90,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(196,163,90,0.02) 1px, transparent 1px)",
-                  backgroundSize: "80px 80px",
+                  background:
+                    "linear-gradient(to top, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.3) 50%, rgba(5,5,5,0.15) 100%)",
                 }}
               />
               <div className="absolute top-12 left-12 w-8 h-8 border-l border-t border-[#C4A35A]/20" />

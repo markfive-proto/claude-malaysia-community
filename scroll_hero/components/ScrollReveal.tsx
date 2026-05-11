@@ -20,12 +20,11 @@ export function ScrollReveal({
     <motion.div
       className={className}
       initial={{
-        opacity: 0,
-        y: direction === "up" ? 32 : 0,
-        x: direction === "left" ? -32 : direction === "right" ? 32 : 0,
+        y: direction === "up" ? 28 : 0,
+        x: direction === "left" ? -28 : direction === "right" ? 28 : 0,
       }}
-      whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      whileInView={{ y: 0, x: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 1.1, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
