@@ -33,6 +33,37 @@ export type TimelineEntry = {
 
 export const timeline: TimelineEntry[] = [
   {
+    date: "May 12, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Claude Code Agent View — Manage All Sessions in One List",
+    desc: "New in Claude Code: agent view. One unified list of all your sessions — active and recent — available today as a research preview. Thariq (Claude Code team) describes it as 'the best Claude Code native way to manage multiple sessions, kind of like tmux built for CC.' Start 'claude agents' in a high-level directory with all repos to track which sessions need your input. Boris Cherny calls it 'the best way to level up from 1 agent to many agents.'",
+    category: "code",
+    type: "major",
+    source: { url: "https://x.com/claudeai/status/2053964076494469410", handle: "@claudeai" },
+    tweetUrl: "https://x.com/claudeai/status/2053964076494469410",
+    tweetText: "New in Claude Code: agent view. One list of all your sessions, available today as a research preview.",
+  },
+  {
+    date: "May 12, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Claude's Constitution — Now an Audiobook",
+    desc: "Claude's Constitution is now an audiobook, read by two of its authors, Amanda Askell and Joe Carlsmith. It includes a Q&A on the writing process, the philosophies that shaped the document, and how it might change as models become more capable. Listen at anthropic.com/constitution",
+    category: "claude",
+    type: "platform",
+    source: { url: "https://x.com/AnthropicAI/status/2053881827396653207", handle: "@AnthropicAI" },
+    tweetUrl: "https://x.com/AnthropicAI/status/2053881827396653207",
+    tweetText: "Claude's Constitution is now an audiobook, read by two of its authors, Amanda Askell and Joe Carlsmith. It includes a Q&A on the writing process, the philosophies that shaped the document, and how it might change as models become more capable.",
+    links: [
+      { label: "anthropic.com/constitution", url: "https://anthropic.com/constitution", type: "article" },
+    ],
+  },
+  {
     date: "May 1, 2026",
     time: "9:00 AM MYT",
     ago: "Yesterday",
@@ -145,6 +176,22 @@ export const timeline: TimelineEntry[] = [
     links: [
       { label: "Testing Catalog", url: "https://www.testingcatalog.com/anthropic-tests-jupiter-v1-p-before-potential-launch-on-may-6/", type: "article" },
       { label: "Daily.dev", url: "https://app.daily.dev/posts/code-with-claude-developer-conference-coming-to-san-francisco-london-and-tokyo-in-spring-2026-drg8bi0va", type: "article" },
+    ],
+  },
+  {
+    date: "May 6, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "Platform",
+    badgeType: "platform",
+    title: "EPAM Strategic Partnership — 10K Claude-Certified Architects",
+    desc: "Anthropic and EPAM Systems announce a multi-year strategic partnership to accelerate enterprise AI adoption. EPAM will build a dedicated practice of over 10,000 Claude-certified architects — 1,300 already certified at announcement, targeting 5,000 by end of Q3 2026. More than 20,000 EPAM employees have completed Anthropic Academy training. The partnership leverages EPAM's engineering expertise alongside Claude models, Claude Code, and the Claude Agent SDK to help Global 2000 clients transition from AI experimentation to fully AI-native operations.",
+    category: "claude",
+    type: "platform",
+    source: { url: "https://www.epam.com/about/newsroom/press-releases/2026/epam-and-anthropic-team-up-to-build-the-future-of-enterprise-transformation-with-safe-applied-ai", handle: "EPAM / PR Newswire" },
+    links: [
+      { label: "PR Newswire", url: "https://www.prnewswire.com/news-releases/epam--anthropic-team-up-to-build-the-future-of-enterprise-transformation-with-safe-applied-ai-302763463.html", type: "article" },
+      { label: "Stock Titan", url: "https://www.stocktitan.net/news/EPAM/epam-anthropic-team-up-to-build-the-future-of-enterprise-0kn2ry6z99c2.html", type: "article" },
     ],
   },
   {
