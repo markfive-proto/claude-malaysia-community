@@ -162,6 +162,38 @@ export const timeline: TimelineEntry[] = [
     source: { url: "https://securitybrief.com.au/story/netskope-links-claude-to-enterprise-compliance-tools", handle: "Security Brief ANZ" },
   },
   {
+    date: "May 23, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Claude Code v2.1.150 — Agent List JSON, /code-review Rename & Usage Breakdown",
+    desc: "Released May 23, 2026. New: 'claude agents --json' for scripting live sessions with agent_id/parent_agent_id in OTEL spans. Pinned background sessions (Ctrl+T) now survive idle, restart in place, and resist memory pressure. /simplify renamed to /code-review with optional effort level (e.g., /code-review high) focused on correctness bugs. Status line JSON now includes GitHub repo and PR info. /plugin Discover shows full capabilities pre-install. /usage now breaks down per-category limits (skills, subagents, plugins, MCP servers). Auto-updater retries transient failures with detailed error codes. Diff rendering performance improved, no duplicate prompt history entries, fixes for PowerShell permissions, voice push-to-talk, and Windows Terminal strobing.",
+    category: "code",
+    type: "major",
+    source: { url: "https://code.claude.com/docs/en/changelog", handle: "Claude Code Changelog" },
+    links: [
+      { label: "GitHub Releases", url: "https://github.com/anthropics/claude-code/releases", type: "github" },
+      { label: "Claude Code Changelog", url: "https://code.claude.com/docs/en/changelog", type: "docs" },
+    ],
+  },
+  // May 22, 2026
+  {
+    date: "May 22, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Project Glasswing — 10,000+ Vulnerabilities Found in Essential Software",
+    desc: "Anthropic launches Project Glasswing, a collaborative AI cybersecurity initiative. In the first month, Anthropic and partners found more than 10,000 high- or critical-severity vulnerabilities in essential software. Patching these will make systems safer. However, the software industry will need to adapt to the volume of vulnerabilities that models like Claude Mythos Preview can find. Anthropic published an initial update on the project at anthropic.com.",
+    category: "claude",
+    type: "major",
+    source: { url: "https://www.anthropic.com/news/project-glasswing", handle: "Anthropic" },
+    tweetUrl: "https://x.com/AnthropicAI/status/2057909102542549503",
+    tweetText: "Last month we launched Project Glasswing, our collaborative AI cybersecurity initiative. Since then, we and our partners have found more than ten thousand high- or critical-severity vulnerabilities in essential software.",
+  },
+
+  {
     date: "May 21, 2026",
     time: "9:00 AM MYT",
     ago: "Today",
