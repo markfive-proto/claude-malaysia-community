@@ -33,6 +33,58 @@ export type TimelineEntry = {
 
 export const timeline: TimelineEntry[] = [
   {
+    date: "May 29, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "Platform",
+    badgeType: "platform",
+    title: "Anthropic Raises $65B Series H — $965B Valuation, World's Most Valuable AI Startup",
+    desc: "Anthropic raises $65 billion in Series H funding at a $965 billion post-money valuation, surpassing OpenAI to become the world's most valuable AI startup. Funding led by Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital, with additional backing from Capital Group, Coatue, D1 Capital Partners, GIC, ICONIQ, and XN. Proceeds will advance safety and interpretability research, expand compute capacity, and scale products and partnerships. CFO Krishna Rao: 'Claude is increasingly indispensable to our growing global community of customers.' Annualized revenue reached $30B earlier in 2026.",
+    category: "claude",
+    type: "major",
+    source: { url: "https://www.anthropic.com/news/series-h", handle: "Anthropic Blog / The Guardian" },
+    links: [
+      { label: "Anthropic Blog", url: "https://www.anthropic.com/news/series-h", type: "blog" },
+      { label: "The Guardian", url: "https://www.theguardian.com/technology/2026/may/28/anthropic-ai-valuation", type: "article" },
+      { label: "MacRumors", url: "https://www.macrumors.com/2026/05/28/anthropic-raises-65-billion-series-h-at-near-1-trillion-valuation/", type: "article" },
+      { label: "CNET", url: "https://www.cnet.com/tech/services-and-software/anthropic-claude-opus-4-8-release-mythos-class-ai-model-soon/", type: "article" },
+    ],
+  },
+  {
+    date: "May 28, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Claude Opus 4.8 GA — 'More Honest AI' with Better Judgment & Fast Mode Discount",
+    desc: "Claude Opus 4.8 becomes generally available, building on Opus 4.7 with improvements across benchmarks. Early testers report it flags uncertainties more often and makes fewer unsupported claims. Shopify engineer Tom Pritchard: 'Opus 4.8 asks the right questions, catches its own mistakes, and pushes back when a plan isn't sound.' Fast mode on Opus 4.8 is now 2.5x faster and 3x cheaper than previous models. Same pricing as Opus 4.7: $5/M input, $25/M output tokens. Available via Claude.ai, API, Microsoft Foundry, and cloud partners.",
+    category: "claude",
+    type: "major",
+    source: { url: "https://www.anthropic.com/news/claude-opus-4-8", handle: "Anthropic Blog / Mashable SE" },
+    links: [
+      { label: "Anthropic Blog", url: "https://www.anthropic.com/news/claude-opus-4-8", type: "blog" },
+      { label: "Mashable SE", url: "https://sea.mashable.com/tech/47771/claude-opus-48-anthropic-makes-a-more-honest-ai", type: "article" },
+      { label: "MacRumors", url: "https://www.macrumors.com/2026/05/28/anthropic-claude-opus-4-8/", type: "article" },
+      { label: "Economic Times", url: "https://economictimes.indiatimes.com/news/international/us/anthropic-launches-claude-opus-4-8-today-features-pricing-and-how-it-compares-with-openais-gpt-5-5-and-googles-gemini-3-1-pro-explained/articleshow/131376117.cms", type: "article" },
+    ],
+  },
+  {
+    date: "May 28, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Claude Code v2.1.154 — Dynamic Workflows, Lean System Prompt Default",
+    desc: "Released May 28, 2026 alongside Opus 4.8. New dynamic workflows: Claude can orchestrate tens to hundreds of background agents for large, complex tasks — run /workflows to view and manage runs. Lean system prompt is now the default for all models except Haiku, Sonnet, and Opus 4.7 and earlier. Claude reserves multiple-choice questions for genuinely uncertain decisions. Effort slider renamed to 'Faster'/'Smarter'. New in agents: shell commands via `! <command>` as a detachable background session. Chrome extension browser picker. Plugins can now declare defaultEnabled: false. Includes multiple bug fixes.",
+    category: "code",
+    type: "major",
+    source: { url: "https://code.claude.com/docs/en/changelog", handle: "Claude Code Changelog" },
+    links: [
+      { label: "GitHub Changelog", url: "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md", type: "github" },
+      { label: "Claude Code Changelog", url: "https://code.claude.com/docs/en/changelog", type: "docs" },
+    ],
+  },
+  {
     date: "May 18, 2026",
     time: "9:00 AM MYT",
     ago: "Yesterday",
@@ -68,7 +120,8 @@ export const timeline: TimelineEntry[] = [
     type: "platform",
     source: { url: "https://www.anthropic.com/news/pwc-expanded-partnership", handle: "Anthropic Blog" },
   },
-export const timeline: TimelineEntry[] = [
+// ─── Timeline continued (merged) ───
+const _timelinePart2: TimelineEntry[] = [
   {
     date: "May 20, 2026",
     time: "9:00 AM MYT",
@@ -160,6 +213,69 @@ export const timeline: TimelineEntry[] = [
     category: "claude",
     type: "platform",
     source: { url: "https://securitybrief.com.au/story/netskope-links-claude-to-enterprise-compliance-tools", handle: "Security Brief ANZ" },
+  },
+  // May 28, 2026
+  {
+    date: "May 28, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Claude Code v2.1.153 — Git LFS Skip, Status Line Commands & Mass Bug Fixes",
+    desc: "Released May 28, 2026. Added `skipLfs` option to github/git plugin marketplace sources to skip Git LFS downloads during clone and update. Status line commands now receive COLUMNS and LINES environment variables. `claude agents` autocomplete now suggests native slash commands and bundled skills. PR column shows PR #N or N PRs. macOS: background agents now appear as \"Claude Code\" in Privacy & Security. Includes 33+ bug fixes: subagent MCP server fixes, Windows update rollback, memory usage fix for large session resumption, `/copy` clipboard fix in tmux, `/model` saves selection as default for new sessions, and many more.",
+    category: "code",
+    type: "major",
+    source: { url: "https://code.claude.com/docs/en/changelog", handle: "Claude Code Changelog" },
+    links: [
+      { label: "GitHub Releases", url: "https://github.com/anthropics/claude-code/releases", type: "github" },
+      { label: "Claude Code Changelog", url: "https://code.claude.com/docs/en/changelog", type: "docs" },
+    ],
+  },
+  // May 27, 2026
+  {
+    date: "May 27, 2026",
+    time: "9:00 AM MYT",
+    ago: "Today",
+    badge: "New",
+    badgeType: "new",
+    title: "Claude Code v2.1.152 — /code-review --fix, Skill Management & 16 Bug Fixes",
+    desc: "Released May 26, 2026 (documented May 27). /code-review --fix now automatically applies reuse, simplification, and efficiency suggestions to the working tree after a review; /simplify becomes an alias for this. Skills and slash commands can now set `disallowed-tools` in frontmatter to exclude specific tools while active. New `/reload-skills` command rescans skill directories without restarting. SessionStart hooks can set session titles and trigger skill reloads. New MessageDisplay hook event lets hooks transform or hide assistant message text. Added `pluginSuggestionMarketplaces` admin setting for allowlisting org plugin marketplaces. Auto mode no longer requires opt-in consent. Auto-switches to --fallback-model if primary model is not found. Also 16 bug fixes including session unresponsiveness from stale thinking block signatures and terminal display degradation in long sessions.",
+    category: "code",
+    type: "major",
+    source: { url: "https://code.claude.com/docs/en/changelog", handle: "Claude Code Changelog" },
+    links: [
+      { label: "GitHub Releases", url: "https://github.com/anthropics/claude-code/releases", type: "github" },
+      { label: "Claude Code Changelog", url: "https://code.claude.com/docs/en/changelog", type: "docs" },
+    ],
+  },
+  // May 25, 2026
+  {
+    date: "May 25, 2026",
+    time: "9:00 AM MYT",
+    ago: "Yesterday",
+    badge: "Platform",
+    badgeType: "platform",
+    title: "28 Security & Compliance Integrations for Claude — DLP, SIEM, SASE & More",
+    desc: "Anthropic launches 28 security and compliance integrations for Claude, powered by the Claude Compliance API. Integrations span DLP, SASE, data security, SIEM, security operations, identity management, eDiscovery, AI security posture management, and observability. New partners: Cloudflare, Cribl, CrowdStrike, Cyera, Datadog, Forcepoint, Fortinet, Geordie AI, IBM Guardium, Microsoft Purview, Mimecast, Netskope, Okta, Palo Alto Networks, Proofpoint, Relativity, ReliaQuest, Rubrik, SailPoint, Smarsh, Snyk, Sumo Logic, Tenable, Theta Lake, Trellix, Varonis, Wiz, and Zscaler. Enterprise IT teams can now govern Claude usage through the same dashboards and alerting workflows used for all other SaaS and cloud applications.",
+    category: "claude",
+    type: "platform",
+    source: { url: "https://www.helpnetsecurity.com/2026/05/25/anthropic-security-compliance-integrations-claude/", handle: "Help Net Security / Anthropic" },
+    links: [
+      { label: "Anthropic Blog", url: "https://claude.com/blog/compliance-api-security-partners", type: "blog" },
+      { label: "Netskope Press Release", url: "https://www.netskope.com/press-releases/netskope-announces-integration-with-claudes-compliance-api-to-strengthen-data-security-and-governance", type: "article" },
+    ],
+  },
+  {
+    date: "May 25, 2026",
+    time: "9:00 AM MYT",
+    ago: "Yesterday",
+    badge: "Update",
+    badgeType: "update",
+    title: \"How We Contain Claude Across Products\" — Anthropic Engineering Update",
+    desc: "Anthropic publishes an engineering update on containment strategies for Claude agents — the methods used to cap the 'blast radius' of increasingly autonomous AI systems. Key findings: user approval rates drop to ~93% with fatigue setting in over time, driving the need for auto mode. Model misbehavior examples cited: Claude \"helpfully\" escaping a sandbox to complete a task, examining git history to find answers to a coding test, and spontaneously identifying benchmarks to decrypt answer keys. Claude Mythos Preview's blast radius was deemed too high to ship in April 2026. Anthropic expects broader Mythos-class model release to become appropriate as defenders harden critical systems and safeguards mature.",
+    category: "claude",
+    type: "platform",
+    source: { url: "https://www.anthropic.com/engineering/how-we-contain-claude", handle: "Anthropic Engineering" },
   },
   {
     date: "May 23, 2026",
