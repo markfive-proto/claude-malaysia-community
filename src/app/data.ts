@@ -33,6 +33,21 @@ export type TimelineEntry = {
 
 export const timeline: TimelineEntry[] = [
   {
+    date: "July 17, 2026",
+    time: "9:03 AM MYT",
+    ago: "Today",
+    badge: "Platform",
+    badgeType: "platform",
+    title: "Deloitte Launches Platform for Secure Software — Powered by Anthropic's Claude",
+    desc: "Deloitte unveils a new platform for secure software development powered by Anthropic's Claude models. The platform is designed to help organizations address the growing challenge of vulnerability discovery and remediation by leveraging Claude for tasks including fix sourcing, patch testing, validation, certification, and deployment. The partnership signals Anthropic's deepening push into enterprise cybersecurity workflows, with Deloitte integrating Claude across its global consulting practice to help clients harden software supply chains at scale.
+    category: "claude",
+    type: "platform",
+    source: { url: "https://www.prnewswire.com/news-releases/deloitte-launches-platform-for-secure-software-powered-by-anthropics-claude-models-302827783.html", handle: "PR Newswire / Deloitte" },
+    links: [
+      { label: "PR Newswire", url: "https://www.prnewswire.com/news-releases/deloitte-launches-platform-for-secure-software-powered-by-anthropics-claude-models-302827783.html", type: "article" },
+    ],
+  },
+  {
     date: "July 15, 2026",
     time: "9:03 AM MYT",
     ago: "2 days ago",
